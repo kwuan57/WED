@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary py-3 fixed-top">
+        <div class="container">
+            <img onclick="window.location.href='index.html'" src="./img/logo1.png" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i id="bar" class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <span class="search-icon">
+                            <input type="text" class="search-input" placeholder="Search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <a href="cart.html"><i class="fa-solid fa-shopping-bag"></i><sup class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            1
+                        </sup></a>
+                        <div class="dropdown">
+                            <a class="nav-link-2" href="#" id="navbarDropdown" role="button">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Tài khoản của tôi</a></li>
+                                <li><a class="dropdown-item" href="#">Đơn mua</a></li>
+                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact" class="container my-5 py-5" >
+        <div class="text-center py-5 contact-us" data-aos="zoom-out-up">
+            <h1>Liên Hệ</h1>
+        </div>
+
+        <div class="container my-5 py-5" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-out">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 contact-info">
+                    <span>Liên Hệ</span>
+                    <h2>Ghé thăm cửa hàng của chúng tôi</h2>
+                    <h3><img src="./img/logo1.png" alt=""></h3>
+                    <div >
+                        <li>
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span class="ps-2">97 Man Thiện, Thủ Đức, Thành Phố Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <span class="ps-2">(123) 456-7890</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <span class="ps-2">l7jxS@example.com</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-clock"></i></span>
+                            <span class="ps-2">9:00 AM - 9:00 PM</span>
+                        </li>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12" data-aos="flip-down" data-aos-duration="1000">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6350304173584!2d106.784089774806!3d10.847986989305172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752772b245dff1%3A0xb838977f3d419d!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IENow61uaCBWaeG7hW4gVGjDtG5nIGPGoSBz4bufIHThuqFpIFRQLkhDTQ!5e1!3m2!1svi!2s!4v1731857414720!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-5 py-5" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <img src="./img/logo2.png" alt="">
+                <p class="pt-3">Fringilla urna porttior rhoncus dolor purus luctus venenatis lectus magna fringilla diam
+                </p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 class="pb-2">Featured</h5>
+                <ul class="text-uppercase list-unstyled list">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Clothes</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Contact Us</h5>
+                <div class="contact d-flex">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="ps-2">123, Main Street, Your City</span>
+                </div>
+                <div class="contact d-flex">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <span class="ps-2">(123) 456-7890</span>
+                </div>
+                <div class="contact d-flex">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <span class="ps-2">l7jxS@example.com</span>
+                </div>
+            </div>
+
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 class="pb-2">Instagram</h5>
+                <div class="row">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/1.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/2.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/3.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/4.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/5.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/6.jpg" alt="">
+                </div>
+            </div>
+            <div class="copyright mt-5">
+                <div class="row container mx-auto">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img src="./img/payment.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 text-nowrap">
+                        <p>Copyright ©2023 All Rights Reserved</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary py-3 fixed-top">
+        <div class="container">
+            <img src="./img/logo1.png" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i id="bar" class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="search-icon">
+                            <input type="text" class="search-input" placeholder="Search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <i class="fa-solid fa-shopping-bag"></i>
+                        <div class="dropdown">
+                            <a class="nav-link-2" href="#" id="navbarDropdown" role="button">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Tài khoản của tôi</a></li>
+                                <li><a class="dropdown-item" href="#">Đơn mua</a></li>
+                                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="cart" class="h-100 my-5 py-5">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center my-4">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Cart - 2 items</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Single item -->
+                            <div class="row cart-item" data-price="17.99">
+                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded">
+                                        <img src="./img/shop/1.jpg" class="w-100" alt="Blue Jeans Jacket" />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                    <p><strong>Blue denim shirt</strong></p>
+                                    <p>Color: blue</p>
+                                    <p>Size: M</p>
+                                    <button class="btn btn-danger btn-sm me-1 mb-2">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                    <div class="d-flex mb-4" style="max-width: 300px">
+                                        <button class="btn btn-dark px-3 me-2" onclick="updatePrice(this, -1)">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <div class="form-outline">
+                                            <input min="0" name="quantity" value="1" type="number"
+                                                class="form-control quantity-input" onchange="updatePrice(this, 0)" />
+                                        </div>
+                                        <button class="btn btn-dark px-3 ms-2" onclick="updatePrice(this, 1)">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <p class="text-start text-md-center">
+                                        <strong class="item-price">$17.99</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <p><strong>Expected shipping delivery</strong></p>
+                          <p class="mb-0">12.10.2020 - 14.10.2020</p>
+                        </div>
+                      </div>
+                    <div class="card mb-4 mb-lg-0">
+                        <div class="card-body">
+                            <p><strong>We accept</strong></p>
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                                alt="Visa" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                                alt="American Express" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                                alt="Mastercard" />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                    Products
+                                    <span id="totalProducts">$37.99</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    Shipping
+                                    <span>Extra</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                    <div>
+                                        <strong>Total amount</strong>
+                                        <p class="mb-0">(including VAT)</p>
+                                    </div>
+                                    <span id="totalAmount"><strong>$37.99</strong></span>
+                                </li>
+                            </ul>
+                            <button class="btn btn-dark w-100">Go to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <img src="./img/logo2.png" alt="">
+                <p class="pt-3">Fringilla urna porttior rhoncus dolor purus luctus venenatis lectus magna fringilla diam
+                </p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 class="pb-2">Featured</h5>
+                <ul class="text-uppercase list-unstyled list">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Boys</a></li>
+                    <li><a href="#">Girls</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Clothes</a></li>
+                </ul>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 class="pb-2">Contact Us</h5>
+                <div class="contact d-flex">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="ps-2">123, Main Street, Your City</span>
+                </div>
+                <div class="contact d-flex">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <span class="ps-2">(123) 456-7890</span>
+                </div>
+                <div class="contact d-flex">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <span class="ps-2">l7jxS@example.com</span>
+                </div>
+            </div>
+
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 class="pb-2">Instagram</h5>
+                <div class="row">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/1.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/2.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/3.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/4.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/5.jpg" alt="">
+                    <img class="img-fluid w-25 h-100 m-2" src="./img/insta/6.jpg" alt="">
+                </div>
+            </div>
+            <div class="copyright mt-5">
+                <div class="row container mx-auto">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img src="./img/payment.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 text-nowrap">
+                        <p>Copyright ©2023 All Rights Reserved</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function updatePrice(element, change) {
+            const cartItem = element.closest('.cart-item');
+            const pricePerItem = parseFloat(cartItem.getAttribute('data-price'));
+            const quantityInput = cartItem.querySelector('.quantity-input');
+            const itemPriceElement = cartItem.querySelector('.item-price');
+
+            // Update quantity
+            let quantity = parseInt(quantityInput.value);
+            if (change !== 0) {
+                quantity = Math.max(0, quantity + change);
+                quantityInput.value = quantity;
+            }
+
+            // Update item price
+            const totalItemPrice = (pricePerItem * quantity).toFixed(2);
+            itemPriceElement.textContent = `$${totalItemPrice}`;
+
+            // Update total price
+            updateTotalAmount();
+        }
+
+        function updateTotalAmount() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            let total = 0;
+
+            cartItems.forEach(item => {
+                const pricePerItem = parseFloat(item.getAttribute('data-price'));
+                const quantity = parseInt(item.querySelector('.quantity-input').value);
+                total += pricePerItem * quantity;
+            });
+
+            document.getElementById('totalProducts').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('totalAmount').textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Initialize total amount on page load
+        updateTotalAmount();
+    </script>
+
+</body>
+
+</html>
