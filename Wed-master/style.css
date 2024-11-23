@@ -261,7 +261,7 @@ i {
 }
 
 #new h2{
-    color: #1d1d1d;
+    color: #EEEEEE;
 }
 
 #new .one img {
@@ -284,7 +284,9 @@ i {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.527);
 }
-
+#new .one:hover .details h2 {
+    color: #373A40;
+    }
 
 #new .one .text-uppercase{
     margin-top: 20px;
@@ -293,12 +295,11 @@ i {
 #new .one:hover .details button {
     display: inline-block;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     color: #2a2a2a;
     background: none;
     text-transform: uppercase;
     border-bottom: 1px solid #2a2a2a;
-    padding: 2.5px;
     transform: translateY(70px);
     transition: 0.3s ease;
 }
@@ -323,8 +324,7 @@ i {
 }
 
 .product img{
-    width: 300px;
-    height: 300px;
+   
     object-fit: cover;
     transition: 0.3s all;
 }
@@ -340,10 +340,13 @@ i {
         border-radius: 80%; 
         z-index: 10;
 }
-.product:hover img,
-.product:hover .sale{
+.product:hover img
+ {
     transform: translateY(-5px); /* Nâng button lên 5px khi hover */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Làm bóng đổ mạnh hơn khi hover */
+}
+.product:hover .sale-badge{
+    transform: translateY(-5px);
 }
 
 
@@ -426,13 +429,25 @@ footer .copyright a:hover{
 
 
 /* blog */
+#blog-container a{
+    text-decoration: none;
+    color: #000;
+}
 
 #blog-container .post .post-img{
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    height: 300px;
+    object-fit: fill;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
+#blog-container  .post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease
+    }
 
 #blog-container .post img{
     transition: 0.3s ease;
@@ -565,4 +580,57 @@ footer .copyright a:hover{
     width: 100%;
     height: 400px;
     margin: 30px 0;
+}
+
+/* blogPost */
+.blog-post-header{
+    background-color: #111111;
+    height: 40vh;
+}
+.blog-content h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 30px 0 10px 0;
+    color: #222;
+}
+
+.blog-content li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.blog-content p{
+    font-size: 24px;
+    margin: 30px 0 10px 0;
+    color: #222;
+}
+.more_blog h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 30px 0 10px 0;
+    color: #111111;
+}
+.more_blog p{
+    font-size: 16px;
+}
+.more_blog .card-title{
+    color: inherit;
+    font-size: 20px;
+    font-weight: 600;
+ }
+ 
+.more_blog .card-body{
+    cursor: pointer;
+    padding: 10px 0px;
+}
+.more_blog .card-img-top{
+    border-radius: 0px;
+}
+.more_blog .card{
+    border-radius: 0px;
+    border: none;
+    margin: 10px 0;
+}
+.more_blog .card:hover{
+    color: darkgray;
+    background-color: #f7f7f7;
 }
