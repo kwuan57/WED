@@ -14,6 +14,66 @@
 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>.search-bar {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+    }
+
+    .quick-assists h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .quick-assists p {
+        color: #555;
+    }
+
+    .quick-assists .category h5 {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .quick-assists a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .quick-assists a:hover {
+        text-decoration: underline;
+    }
+    .contact-us-section {
+            margin-top: 3rem;
+        }
+
+        .contact-us-section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .contact-us-section .contact-item {
+            text-align: center;
+        }
+
+        .contact-us-section .contact-item h5 {
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .contact-us-section .contact-item p {
+            margin: 0;
+            color: #555;
+        }
+
+        .contact-us-section .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-us-section hr {
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -64,44 +124,130 @@
         </div>
     </nav>
 
-    <section id="contact" class="container my-5 py-5" >
-        <div class="text-center py-5 contact-us" data-aos="zoom-out-up">
-            <h1>Liên Hệ</h1>
+    <div class="container mt-5 pt-5">
+        <!-- Search Bar -->
+        <div class="text-center">
+            <h1 class="mb-3">GET HELP</h1>
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="What can we help you with?">
+            </div>
         </div>
 
-        <div class="container my-5 py-5" data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-out">
+        <!-- Quick Assists Section -->
+        <div class="quick-assists mt-5">
+            <h2 class="mb-3">Quick Assists</h2>
+            <p class="mb-4 border-bottom border-3 pb-2 ">Answers to our most frequently asked questions are just one click away.</p>
+
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-12 contact-info">
-                    <span>Liên Hệ</span>
-                    <h2>Ghé thăm cửa hàng của chúng tôi</h2>
-                    <h3><img src="./img/logo1.png" alt=""></h3>
-                    <div >
-                        <li>
-                            <span><i class="fa-solid fa-location-dot"></i></span>
-                            <span class="ps-2">97 Man Thiện, Thủ Đức, Thành Phố Hồ Chí Minh</span>
-                        </li>
-                        <li>
-                            <span><i class="fa-solid fa-phone"></i></span>
-                            <span class="ps-2">(123) 456-7890</span>
-                        </li>
-                        <li>
-                            <span><i class="fa-solid fa-envelope"></i></span>
-                            <span class="ps-2">l7jxS@example.com</span>
-                        </li>
-                        <li>
-                            <span><i class="fa-solid fa-clock"></i></span>
-                            <span class="ps-2">9:00 AM - 9:00 PM</span>
-                        </li>
+                <!-- Column 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <h5>Returns</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">What is BasicFit's return policy?</a></li>
+                            <li><a href="#">How do I return my order?</a></li>
+                            <li><a href="#">Where is my refund?</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-12" data-aos="flip-down" data-aos-duration="1000">
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6350304173584!2d106.784089774806!3d10.847986989305172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752772b245dff1%3A0xb838977f3d419d!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IENow61uaCBWaeG7hW4gVGjDtG5nIGPGoSBz4bufIHThuqFpIFRQLkhDTQ!5e1!3m2!1svi!2s!4v1731857414720!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <!-- Column 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <h5>Dispatch & Delivery</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">What are BasicFit's delivery options?</a></li>
+                            <li><a href="#">How do I get free delivery on orders?</a></li>
+                            <li><a href="#">Can my order be dispatched internationally?</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <h5>Orders & Payment</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Where is my order?</a></li>
+                            <li><a href="#">Can I cancel or change my  order?</a></li>
+                            <li><a href="#">What are BasicFit's payment options?</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <h5>Shopping</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">How do I find the right size and fit?</a></li>
+                            <li><a href="#">How can I get  best deals?</a></li>
+                            <li><a href="#">Does BasicFit offer product advice?</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <h5>Basic Fit Membership & Apps</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">What is BasicFit Membership?</a></li>
+                            <li><a href="#">How do I join a Draw?</a></li>
+                            <li><a href="#">How do I get  newest sneaker releases?</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <h5>Company Info</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Do shoes have a warranty?</a></li>
+                            <li><a href="#">What is BasicFit's mission?</a></li>
+                            <li><a href="#">Where can I learn more about BasicFit, Inc.?</a></li>
+                            <li><a href="#">View all</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="container contact-us-section">
+        <h2 class="text-start border-bottom border-3 pb-2">Contact Us</h2>
+        
+        <div class="row">
+            <!-- Chat with us -->
+            <div class="col-md-4 contact-item">
+                <div class="icon"><i class="fa-regular fa-message"></i></div>
+                <h5>Chat with us</h5>
+                <p>5:00 - 23:00</p>
+                <p>7 days a week</p>
+            </div>
+
+            <!-- Call us -->
+            <div class="col-md-4 contact-item">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <h5>Call us</h5>
+                <p>12280903 (Viettel)</p>
+                <p>12032487 (VTI)</p>
+                <p>05:00 - 23:00</p>
+                <p>7 days a week</p>
+            </div>
+
+            <!-- Find a store -->
+            <div class="col-md-4 contact-item">
+                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h5>Find a Store</h5>
+            </div>
+        </div>
+    </div>
 
     <footer class="mt-5 py-5" data-aos="fade-up"
     data-aos-anchor-placement="top-center">

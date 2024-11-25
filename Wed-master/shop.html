@@ -24,19 +24,66 @@
             object-fit: cover;
         }
 
-        #featured>div.row.mx-auto.container>nav>ul>li.page-item>a {
-            color: black;
-        }
+        /* Định dạng thanh phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    list-style: none;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        #featured>div.row.mx-auto.container>nav>ul>li.page-item.active>a {
-            background-color: black;
-            color: #fff;
-        }
+/* Nút phân trang */
+.page-item .page-link {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
 
-        #featured>div.row.mx-auto.container>nav>ul>li:nth-child(n):hover>a {
-            background-color: black;
-            color: #fff;
-        }
+/* Trạng thái nút hiện tại */
+.page-item.active .page-link {
+    background-color: #ff6f61;
+    color: white;
+    border-color: #ff6f61;
+}
+
+/* Trạng thái bị vô hiệu hóa */
+.page-item.disabled .page-link {
+    color: #aaa;
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
+
+/* Hiệu ứng hover */
+.page-item .page-link:hover:not(.disabled):not(.active) {
+    background-color: #ffebeb;
+    border-color: #ff6f61;
+    color: #ff6f61;
+    transform: scale(1.05);
+}
+
+/* Hiển thị trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 5px;
+    }
+
+    .page-item .page-link {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 
@@ -106,7 +153,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$78</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -122,7 +169,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">
                     <span class="text-decoration-line-through">$128</span>
                     <span class="text-danger">$100</span>
@@ -138,10 +185,9 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">
-                    <span class="text-decoration-line-through">$128</span>
-                    <span class="text-danger">$99</span>
+                    <span class="p-price">$128</span>
                 </h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -154,7 +200,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$108</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -167,7 +213,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$78</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -180,7 +226,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$128</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -193,7 +239,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$328</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -206,7 +252,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$108</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -219,7 +265,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$78</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -232,7 +278,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$128</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -245,7 +291,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$328</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -258,7 +304,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$108</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -271,7 +317,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$78</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -284,7 +330,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$128</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -297,7 +343,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$328</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -310,7 +356,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$108</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -323,7 +369,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$78</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -336,7 +382,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$128</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -349,7 +395,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$328</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -362,7 +408,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$108</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -375,7 +421,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$78</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -388,7 +434,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$128</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -401,7 +447,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$328</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>
@@ -414,7 +460,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h5 class="p-name">Sport Boots</h5>
+                <h5 class="p-name">Product</h5>
                 <h4 class="p-price">$108</h4>
                 <button class="buy-btn">Buy Now</button>
             </div>

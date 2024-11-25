@@ -16,44 +16,102 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .small-img-group {
-            display: flex;
-            justify-content: space-between;
-        }
-        .small-img-col{
-            flex-basis: 24%;
-            cursor: pointer;
-        }
+.sproduct {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .sproduct select{
-            display: block;
-            padding: 5px 10px;
-        }
+/* Hình ảnh chính */
+#MainImg {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
 
-        .sproduct input{
-            width: 50px;
-            height: 40px;
-            padding-left: 10px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
+#MainImg:hover {
+    transform: scale(1.05);
+}
 
-        .sproduct input:focus,
-        .sproduct select:focus{
-            outline: none;
-        }
+/* Hình ảnh nhỏ */
+.small-img-group {
+    display: flex;
+    gap: 10px;
+}
 
-        .buy-btn{
-            background: #fb774b;
-            opacity: 1;
-            transition: 0.3s ease;
-            color: #fff;
-        }
+.small-img-col img {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, border 0.3s;
+}
 
-        .sproduct .small-img:hover{
-            transform: translateY(-5px); /* Nâng button lên 5px khi hover */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Làm bóng đổ mạnh hơn khi hover */
-        }
+.small-img-col img:hover {
+    transform: scale(1.1);
+    border-color: #ff6f61;
+}
+
+/* Thông tin sản phẩm */
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 1rem;
+    color: #333;
+}
+
+select:focus, input:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+/* Nút Add to Cart */
+.buy-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #e65b50;
+}
+
+/* Chi tiết sản phẩm */
+h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+span {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
     </style>
 </head>
 
@@ -77,10 +135,10 @@
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -95,26 +153,25 @@
     <section class="container sproduct my-5 py-5">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid w-100" src="./img/shop/1.jpg" id="MainImg" alt="">
-                <div class="small-img-group pt-2">
+                <img class="img-fluid w-100 " src="./img/shop/1.5.png" id="MainImg" alt="">
+                <div class="small-img-group pt-4 mb-3">
                     <div class="small-img-col">
-                        <img src="./img/shop/1.jpg" width="100%" alt="" class="small-img">
+                        <img src="./img/shop/1'4.png" width="100%" alt="" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="./img/shop/24.jpg" width="100%" alt="" class="small-img">
+                        <img src="./img/shop/1'1.jpg" width="100%" alt="" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="./img/shop/25.jpg" width="100%" alt="" class="small-img">
+                        <img src="./img/shop/1'2.png" width="100%" alt="" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="./img/shop/26.jpg" width="100%" alt="" class="small-img">
+                        <img src="./img/shop/1'3.jpg" width="100%" alt="" class="small-img">
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12 col-12">
-                <h6>Home / T-Shirt</h6>
-                <h3>Men's Fashion T-Shirt</h3>
+                <h3>Hoodie</h3>
                 <h2>$139.00</h2>
                 <select class="my-3">
                     <option >Select Size</option>
@@ -125,13 +182,9 @@
                     <option disabled>S</option>
                 </select>
                 <input type="number" value="1" min="1">
-                <a href="cart.html"><button class="buy-btn">Add To Cart</button></a>
+                <a href="cart.html" class="text-decoration-none"><button class="buy-btn my-3">Add To Cart</button></a>
                 <h4 class="mt-4 mb-3 ">Product Details</h4>
-                <span>It is a long established fact that a reader will be distracted by the readable content of a page
-                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                    distribution of letters, as opposed to using 'Content here, content here', making it look like
-                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                    their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                <span>This pullover hoodie is light enough for warmer weather and easy to layer when the temperature drops. Its loose fit is roomy through the chest and body for easy movement and layering.
             </div>
         </div>
     </section>

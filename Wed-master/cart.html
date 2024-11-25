@@ -14,7 +14,138 @@
 
 
     <link rel="stylesheet" href="style.css">
+   <style>
+    #cart {
+  background-color: #f8f9fa;
+  color: #212529;
+}
 
+/* Container Padding */
+#cart .container {
+  max-width: 1200px;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-header {
+  background-color: #fb774b;
+  color: #fff;
+}
+
+.card-body {
+  background-color: #ffffff;
+}
+
+.card-body strong {
+  font-size: 1.1rem;
+}
+
+.card img {
+  border-radius: 5px;
+}
+
+/* Cart Item Styles */
+.cart-item {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* Product Details */
+.cart-item .col-lg-5 p {
+  margin-bottom: 0.5rem;
+}
+
+.cart-item button {
+  border: none;
+  border-radius: 4px;
+}
+
+.cart-item .btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.cart-item .btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Quantity Controls */
+.quantity-input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: #343a40;
+}
+
+/* Summary Section */
+#cart .card .list-group-item {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+#cart .list-group-item span {
+  font-weight: bold;
+}
+
+/* Button Styles */
+.btn-dark {
+  background-color: #343a40;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #495057;
+}
+
+.btn.btn-danger {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 8px; 
+  border-radius: 4px;
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-item .col-lg-3, 
+  .cart-item .col-lg-5, 
+  .cart-item .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cart-item {
+    text-align: center;
+  }
+
+  .cart-item .btn {
+    margin: 0.5rem 0;
+  }
+}
+   </style>
 
 
 </head>
@@ -72,22 +203,22 @@
                 <div class="col-md-8">
                     <div class="card mb-4">
                         <div class="card-header py-3">
-                            <h5 class="mb-0">Cart - 2 items</h5>
+                            <h5 class="mb-0">Cart</h5>
                         </div>
                         <div class="card-body">
                             <!-- Single item -->
                             <div class="row cart-item" data-price="17.99">
                                 <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                                     <div class="bg-image hover-overlay hover-zoom ripple rounded">
-                                        <img src="./img/shop/1.jpg" class="w-100" alt="Blue Jeans Jacket" />
+                                        <img src="./img/shop/1.jpg" class="w-100" alt="Hoodie" />
                                     </div>
                                 </div>
 
                                 <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                                    <p><strong>Blue denim shirt</strong></p>
-                                    <p>Color: blue</p>
+                                    <p><strong>Black hoodie</strong></p>
+                                    <p>Color: Black</p>
                                     <p>Size: M</p>
-                                    <button class="btn btn-danger btn-sm me-1 mb-2">
+                                    <button class="btn btn-danger btn-sm ">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </div>
@@ -115,7 +246,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                           <p><strong>Expected shipping delivery</strong></p>
-                          <p class="mb-0">12.10.2020 - 14.10.2020</p>
+                          <p class="mb-0">12.11.2024 - 14.12.2024</p>
                         </div>
                       </div>
                     <div class="card mb-4 mb-lg-0">

@@ -1,6 +1,5 @@
 
-const isLoggedIn = false; // Thay đổi thành false để kiểm tra trạng thái chưa đăng nhập
-
+const isLoggedIn = false;
 // Lấy phần tử dropdown
 const userDropdown = document.getElementById('user-dropdown');
 
